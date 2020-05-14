@@ -5,7 +5,7 @@ function resolve (dir) {
 }
 
 module.exports = {
-  publicPath: '/playground',
+  publicPath: '/toolbox',
 
   chainWebpack: (config) => {
     config.resolve.alias
