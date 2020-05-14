@@ -104,9 +104,9 @@
 
 <script>
 import { DateUtil } from 'sn-js-utils'
-import ChineseDistricts from './chinese-districts'
-import NamesDict from './names'
-import { gen, random } from '../utils/card'
+import ChineseDistricts from '@assets/data/chinese-districts'
+import NamesDict from '@assets/data/names'
+import { gen, random } from '@utils/card'
 
 // 定义出生日期的选择范围
 const START_YEAR = 1900
