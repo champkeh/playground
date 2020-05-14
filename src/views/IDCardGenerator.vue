@@ -2,7 +2,7 @@
   <div class="page">
     <h1>身份证号码在线生成器</h1>
     <div class="row">
-      <p class="label">选择地址：</p>
+      <p class="label">出生地：</p>
       <div class="value">
         <div class="picker address">
           <select id="province" class="form-control" @change="onProvinceChange">
