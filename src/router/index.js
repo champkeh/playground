@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: () => import(/* webpackChunkName: "home" */ '../views/Home'),
     meta: {
       title: '工具箱'
     }
@@ -22,11 +21,35 @@ const routes = [
     }
   },
   {
+    path: '/canvas',
+    name: 'CanvasDemo',
+    component: () => import(/* webpackChunkName: "" */ '../views/Canvas'),
+    meta: {
+      title: 'Canvas Demo'
+    }
+  },
+  {
     path: '/idcard',
     name: 'IDCardGenerator',
     component: () => import(/* webpackChunkName: "tools" */ '../views/IDCardGenerator.vue'),
     meta: {
       title: '身份证号码生成器'
+    }
+  },
+  {
+    path: '/float',
+    name: 'FloatPointView',
+    component: () => import(/* webpackChunkName: "tools" */ '../views/FloatPointView'),
+    meta: {
+      title: '浮点数内存视图'
+    }
+  },
+  {
+    path: '/linkedlist',
+    name: 'LinkedList',
+    component: () => import(/* webpackChunkName: "tools" */ '../views/LinkedList'),
+    meta: {
+      title: '链表模拟'
     }
   }
 ]
